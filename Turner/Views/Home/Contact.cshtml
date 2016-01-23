@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<h3 class="text-warning">@ViewBag.Message</h3>
+
+
+
+ <div class="panel-body" id="Panel1">
+    <div class="row">
+        <div class="col-md-4 voffset2 text-info"><label class="control-label">Genre:</label></div>
+        <div class="col-md-4 voffset2  text-primary">
+            @foreach (var genre in ViewBag.titlegenreabout)
+            {
+                <tr>
+                    <td>@genre.Genre.Name,</td>
+
+                </tr>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 voffset2 text-info"><label class="control-label">Awards Won:</label></div>
+        <div class="col-md-4 voffset2 text-success">
+            
+                @foreach (var award in ViewBag.awardabout)
+                {
+                    <tr>
+                        @if (award.AwardWon)
+                        {
+                            <td class="danger">
+
+                                <b>@award.AwardCompany</b>  @award.Award1 (@award.AwardYear),<br />
+                            </td>
+                        }
+                        
+
+                    </tr>
+                }
+            
+        </div>
+    </div>
+     <div class="row">
+         <div class="col-md-4 voffset2 text-info"><label class="control-label">Award Nominations: </label></div>
+         <div class="col-md-4 voffset2 text-danger">
+
+             @foreach (var award in ViewBag.awardabout)
+             {
+                 <tr>
+                     @if (!award.AwardWon)
+                     {
+                         <td class="danger">
+
+                             <b>@award.AwardCompany</b>  @award.Award1 (@award.AwardYear),<br />
+                         </td>
+                     }
+
+
+                 </tr>
+             }
+
+         </div>
+     </div>
+
+    <div class="row">
+        <div class="col-md-4 voffset2 text-info"><label class="control-label">Cast & Crew:</label></div>
+        <div class="col-md-4 voffset2 text-info">
+            @foreach (var cast in ViewBag.titleparticipantabout)
+            {
+                <tr>
+                    <td class="success">
+                        <b>@cast.RoleType</b>  @cast.Participant.Name,<br />
+                    </td>
+
+
+
+                </tr>
+            }
+        </div>
+    </div>
+
+</div>

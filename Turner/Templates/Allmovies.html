@@ -1,0 +1,22 @@
+﻿<div  ng-controller="titlesController" class="container">
+    <div class="row voffset3">
+        <div class="panel text-primary panel-theme">
+            <div class="panel-heading">
+                <h2 class="  panel-title">Movies</h2>
+
+            </div>
+            <div class="panel-body" id="Panel1">
+                <div class="row">
+                    <ul>
+                        <li ng-repeat="x in {{resultTitles}} ">
+                            {{x.TitleName}}
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+</div>

@@ -1,0 +1,35 @@
+﻿<div ng-controller="titlesController" class="container">
+    <div class="row voffset3">
+        <div class="panel text-primary panel-theme">
+            <div class="panel-heading">
+                <h2 class="  panel-title">List of Movie Titles</h2>
+
+            </div>
+            <div class="panel-body" id="Panel1">
+                <div class="row text-center">
+                    <div class="col-md-3 voffset2 text-info  "><label class="control-label">Search for a Title:</label></div>
+                    <div class="col-md-3 voffset2">
+                        <input type="text" class="span12 form-control" ng-model="searchaMovie"  id="txt_moviename" />
+                        
+                    </div>
+                    <div class="col-md-3 vofset1 ">
+                        <button type="button" data-ng-click="getTitlebyname(searchaMovie)" class="btn btn-info  medium btn-theme" id="txt_search">Search</button>
+                    </div>
+                </div>
+                <div><label class="text-warning">Click on a Movie title name for more details</label></div>
+                <div class="row">
+                    <ul>
+                        <li  ng-repeat="titles in resultTitles ">
+                            <a class=" active label-danger badge" href="Home/Contact/{{titles.TitleId}}">{{titles.TitleName}}, {{titles.ReleaseYear}}</a><br/>
+                            <p class="text-info">{{titles.StoryLines[0].Description}} </p> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                           
+               
+                
+        </div>
+    </div>
+
+</div>
