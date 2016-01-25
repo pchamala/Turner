@@ -21,7 +21,7 @@ namespace Turner.Controllers
         [ResponseType(typeof(Title))]
         public async Task<IHttpActionResult> GetTitles()
         {
-            var titles = await db.Titles.ToListAsync();
+            var titles = await db.Titles.OrderBy(t => t.TitleName).ToListAsync();
             return Ok(titles);
         }
 
@@ -29,7 +29,7 @@ namespace Turner.Controllers
         [ResponseType(typeof(Title))]
         public async Task<IHttpActionResult> GetTitle(string name)
         {
-            var title = await db.Titles.Where(x => x.TitleName.Contains(name)).AsNoTracking().ToListAsync();
+            var title = await db.Titles.Where(t => t.TitleName.Contains(name)).OrderBy(t=>t.TitleName).AsNoTracking().ToListAsync();
             if (title == null)
             {
                 return NotFound();

@@ -58,3 +58,4 @@ C:\Users\raj.kumarreddy\Documents\Visual Studio 2013\Projects\Turner\Turner\bin\
 C:\Users\raj.kumarreddy\Documents\Visual Studio 2013\Projects\Turner\Turner\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\raj.kumarreddy\Documents\Visual Studio 2013\Projects\Turner\Turner\obj\Debug\Turner.dll
 C:\Users\raj.kumarreddy\Documents\Visual Studio 2013\Projects\Turner\Turner\obj\Debug\Turner.pdb
+C:\Users\raj.kumarreddy\documents\visual studio 2013\Projects\Turner\Turner\obj\Debug\Turner.csprojResolveAssemblyReference.cache
