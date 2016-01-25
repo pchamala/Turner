@@ -30,6 +30,9 @@ namespace Turner.Controllers
         {
             ViewBag.Message = "Movie Details";
 
+            TitlesController tc = new TitlesController();
+            ViewBag.titles = tc.GetTitlebyid(id);
+
             TitleGenresController tgc = new TitleGenresController();
             ViewBag.titlegenreabout = tgc.GetTitleGenrebyid(id);
 
@@ -38,6 +41,8 @@ namespace Turner.Controllers
 
             AwardsController ac = new AwardsController();
             ViewBag.awardabout  =  ac.GetAwardid(id);
+
+
 
             return View();
         }

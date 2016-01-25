@@ -7,6 +7,18 @@
 
 
  <div class="panel-body" id="Panel1">
+     <div class="row">
+         <div class="col-md-4 voffset2 text-info"><label class="control-label">Movie Name / Year</label></div>
+         <div class="col-md-4 voffset2  text-danger">
+             @foreach (var titles in ViewBag.titles)
+             {
+                 <tr>
+                     <td><b>@titles.TitleName</b> / @titles.ReleaseYear,</td>
+
+                 </tr>
+             }
+         </div>
+     </div>
     <div class="row">
         <div class="col-md-4 voffset2 text-info"><label class="control-label">Genre:</label></div>
         <div class="col-md-4 voffset2  text-primary">
@@ -69,7 +81,7 @@
             {
                 <tr>
                     <td class="success">
-                        <b>@cast.RoleType</b>  @cast.Participant.Name,<br />
+                        <b>@cast.RoleType</b>  <i>@cast.Participant.Name,</i><br />
                     </td>
 
 

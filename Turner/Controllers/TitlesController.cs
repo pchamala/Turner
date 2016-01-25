@@ -38,8 +38,17 @@ namespace Turner.Controllers
             return Ok(title);
         }
 
-        
 
+        [HttpGet, Route("api/TitlebyID")]
+        [ResponseType(typeof(Title))]
+        public  IQueryable<Title> GetTitlebyid(string id)
+        {
+            int titleid = Int32.Parse(id);
+            return   db.Titles.Where(t => t.TitleId==titleid).OrderBy(t => t.TitleName);
+           
+
+            
+        }
        
 
         
