@@ -9,11 +9,11 @@
  <div class="panel-body" id="Panel1">
      <div class="row">
          <div class="col-md-4 voffset2 text-info"><label class="control-label">Movie Name / Year</label></div>
-         <div class="col-md-4 voffset2  text-danger">
+         <div class="col-md-4 voffset2  label-danger badge text-uppercase">
              @foreach (var titles in ViewBag.titles)
              {
                  <tr>
-                     <td><b>@titles.TitleName</b> / @titles.ReleaseYear,</td>
+                     <td><b>@titles.TitleName</b> / @titles.ReleaseYear</td>
 
                  </tr>
              }
@@ -21,11 +21,11 @@
      </div>
     <div class="row">
         <div class="col-md-4 voffset2 text-info"><label class="control-label">Genre:</label></div>
-        <div class="col-md-4 voffset2  text-primary">
+        <div class="col-md-4 voffset2  text-justify">
             @foreach (var genre in ViewBag.titlegenreabout)
             {
                 <tr>
-                    <td>@genre.Genre.Name,</td>
+                    <td><b><i>@genre.Genre.Name,</i></b></td>
 
                 </tr>
             }
@@ -76,12 +76,12 @@
 
     <div class="row">
         <div class="col-md-4 voffset2 text-info"><label class="control-label">Cast & Crew:</label></div>
-        <div class="col-md-4 voffset2 text-info">
+        <div class="col-md-8 voffset2 text-info">
             @foreach (var cast in ViewBag.titleparticipantabout)
             {
                 <tr>
                     <td class="success">
-                        <b>@cast.RoleType</b>  <i>@cast.Participant.Name,</i><br />
+                        <b>@cast.RoleType</b>  <i>@cast.Participant.Name,</i>
                     </td>
 
 

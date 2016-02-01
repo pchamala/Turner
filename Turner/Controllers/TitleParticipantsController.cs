@@ -27,7 +27,7 @@ namespace Turner.Controllers
         public IQueryable<TitleParticipant> GetTitleParticipantByid(string id)
         {
             int titleid = Int32.Parse(id);
-            return db.TitleParticipants.Where(x => x.TitleId == titleid);
+            return db.TitleParticipants.Where(x => x.TitleId == titleid).OrderBy(x => x.RoleType);
 
 
 
